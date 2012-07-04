@@ -1,10 +1,13 @@
 var watch = require('./lib/watchn').watch,
 	http = require('http'),
-	hasFileChange = false;
+	lastChange = new Date();
+
+// process.argv[2] is the root of the location to watch
+// process.argv[3] is the (optional) regular expression defining the files to watch
 
 watch(process.argv[2], /.+/, function (path, curr, prev) {
-    hasFileChange = true;
-    console.log('change to ' + path);
+    lastChange = new Date();
+    console.log('change ' + path);
 });
 
 http.createServer(function (req, res) {
@@ -14,9 +17,11 @@ http.createServer(function (req, res) {
 		'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
 		'Access-Control-Allow-Headers': 'Content-Type'
 	});
-  	res.end(JSON.stringify({hasFileChange: hasFileChange}));
-  	console.log('returning: ' + JSON.stringify({hasFileChange: hasFileChange}));
-  	hasFileChange = false;
+
+	// todo if /script  
+
+  	res.end(JSON.stringify({lastChange: lastChange}));
+  	console.log('returning: ' + JSON.stringify({lastChange: lastChange}));
 }).listen(1337, '127.0.0.1');
 
 
