@@ -1,0 +1,7 @@
+{ "name" : "snap"
+, "version" : "0.1.0"
+, "description" : "Auto-reload web pages based on file system changes"
+, "author" : "Liam McLennan <liam.mclennan@gmail.com>"
+, "main" : "snap.js"
+, "engines" : { "node" : "0.8" }
+}
