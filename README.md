@@ -3,6 +3,8 @@ Snap
 
 Snap is a auto browser reloader designed to be used for web design  and javascript testing. It is capable of monitoring file system changes and reloading a web page when a change is detected. It is like [livereload](http://livereload.com/) but free and works on windows.
 
+Snap is an example of [readme driven development](https://gist.github.com/2849583).
+
 Usage
 -----
 
