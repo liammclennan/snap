@@ -1,14 +1,14 @@
 Snap
 ====
 
-Snap is a auto browser reloader designed to be used for web design and javascript testing. It is capable of monitoring file system changes and reloading a web page when a change is detected.
+Snap is a auto browser reloader designed to be used for web design  and javascript testing. It is capable of monitoring file system changes and reloading a web page when a change is detected. It is like [livereload](http://livereload.com/) but free and works on windows.
 
 Usage
 -----
 
 To use, start the server:
 
-    $ node [path to snap.js] [path to directory to watch for changes] [optional quoted regular expression of files to watch]
+    $ node [path to snap.js] [path to directory to watch for chanes] [optional quoted regular expression of files to watch]
 
 and add the following script reference to the end of your web page, immediately before `</body>`
 
